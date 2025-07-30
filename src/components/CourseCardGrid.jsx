@@ -12,9 +12,8 @@ const CourseCardGrid = () => {
       <CourseCard course="Python Development" image={PythonImg} />
       <CourseCard course="Ios Development" image={IosImg} />
       <CourseCard course="App Development" image={AppImg} />
-      <CourseCard course="Web Development" image={WebImg} />
-      <CourseCard course="Python Development" image={PythonImg} />
-
+      <CourseCard course="Data Science" image={WebImg} />
+      <CourseCard course="PHP Developer" image={PythonImg} />
     </div>
   );
 };

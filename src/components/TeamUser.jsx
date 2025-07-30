@@ -48,7 +48,15 @@ const TeamUsers = () => {
   return (
     <div className="my-16 px-4 md:px-12">
 <hr className="border-t-1 py-10 border-gray-700 my-10 w-full" />
-<h1 className="text-center text-4xl font-bold mb-12 shadow-lg border-b-2 w-[350px] p-3 rounded-lg flex justify-center mx-auto">Our Core Team</h1>
+<h1 className="text-center text-4xl font-bold mb-12 px-6 py-3 mx-auto rounded-lg w-fit bg-white text-gray-800 
+    border border-transparent 
+    bg-clip-padding 
+    shadow-md 
+    relative 
+    z-10 
+    before:absolute before:inset-0 before:rounded-lg before:p-[1px] before:bg-gradient-to-r before:from-purple-500 before:to-blue-500 before:z-[-1]">
+  Our Core Team
+</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-10 justify-items-center">
         {users.map((elem, idx) => (
           <Team

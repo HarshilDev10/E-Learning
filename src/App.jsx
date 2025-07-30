@@ -12,6 +12,11 @@ import CoursesMain from './pages/CoursesMain'
 import Login from './pages/Login'
 import WebDev from './pages/WebDev'
 import Register from './pages/Register'
+import AppDevelopment from './pages/AppDevelopment'
+import DataScience from './pages/DataScience'
+import PHPDeveloper from './pages/PHPDeveloper'
+import PythonDeveloper from './pages/PythonDeveloper'
+import IOSDevelopment from './pages/IosDevelopment'
 
 function App() {
   return (
@@ -46,8 +51,28 @@ function App() {
             <Footer />
           </>
         } />
-        <Route path="/WebDevCourse" element={
+        <Route path="/Web-Development" element={
           <WebDev></WebDev>
+        }
+        />
+        <Route path="/App-Development" element={
+          <AppDevelopment></AppDevelopment>
+        }
+        />
+        <Route path="/Data-Science" element={
+          <DataScience></DataScience>
+        }
+        />
+        <Route path="/PHP-Developer" element={
+          <PHPDeveloper></PHPDeveloper>
+        }
+        />
+        <Route path="/Python-Development" element={
+          <PythonDeveloper></PythonDeveloper>
+        }
+        />
+        <Route path="/Ios-Development" element={
+          <IOSDevelopment></IOSDevelopment>
         }
         />
       </Routes>

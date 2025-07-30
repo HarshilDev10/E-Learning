@@ -1,12 +1,15 @@
 import React from 'react';
 import WebDev from '../pages/WebDev';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 const CourseCard = (props) => {
+  const navigate = useNavigate()
+
   const submitHandler = () => {
-    console.log("Enrolled")
-    };
+    navigate(`${props.course.replace(/\s+/g, '-')}`); 
+  };
+  
 
   return (
     <div className="border-2 border-black mx-8 rounded-lg w-[90%] max-w-[250px] sm:w-[250px] h-auto">

@@ -35,7 +35,7 @@ const Home = () => {
 
       <div className="mt-10">
         <a
-          href="#"
+          href="/Courses"
           className="bg-black text-white rounded-lg px-4 py-2 text-sm sm:text-base"
         >
           Check Courses - Make an Impact

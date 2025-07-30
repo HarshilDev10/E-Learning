@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <nav className="flex items-center justify-between h-16 px-4 sm:px-8 md:px-20 border-b-2 relative">
       {/* Logo */}
-      <div className="text-xl font-bold">AMTICS</div>
+      <div className="text-xl font-bold">ABC College</div>
 
       {/* Desktop Menu */}
       <div className="hidden md:flex gap-8">

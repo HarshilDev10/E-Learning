@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-const AppDevelopment = () => {
+const IosDevelopment = () => {
   const videoRefs = useRef([]);
   const [unlockedVideos, setUnlockedVideos] = useState([0]); // First video unlocked
 
@@ -111,4 +111,4 @@ const AppDevelopment = () => {
   );
 };
 
-export default AppDevelopment;
+export default IosDevelopment;
