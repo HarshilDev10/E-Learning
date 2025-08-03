@@ -51,6 +51,30 @@ function App() {
             <Footer />
           </>
         } />
+        <Route path="/Courses/Web-Development" element={
+          <WebDev></WebDev>
+        }/>
+        <Route path="/Courses/App-Development" element={
+          <AppDevelopment></AppDevelopment>
+        }
+        />
+        <Route path="/Courses/Data-Science" element={
+          <DataScience></DataScience>
+        }
+        />
+        <Route path="/Courses/PHP-Developer" element={
+          <PHPDeveloper></PHPDeveloper>
+        }
+        />
+        <Route path="/Courses/Python-Development" element={
+          <PythonDeveloper></PythonDeveloper>
+        }
+        />
+        <Route path="/Courses/Ios-Development" element={
+          <IOSDevelopment></IOSDevelopment>
+        }
+        />
+        
         <Route path="/Web-Development" element={
           <WebDev></WebDev>
         }

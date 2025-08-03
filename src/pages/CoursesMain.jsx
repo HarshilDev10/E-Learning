@@ -2,6 +2,7 @@ import React from 'react'
 import WebImg from '../assets/Web.jpg'
 import CourseCard from '../components/CourseCard'
 
+
 const CoursesMain = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
