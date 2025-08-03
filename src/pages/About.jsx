@@ -13,7 +13,7 @@ const About = () => {
           and building intuitive and responsive web applications. I enjoy solving real-world problems and continuously learning new things!
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-800 mb-3">🌐 Connect With Me</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-3">Connect With Me</h2>
         <div className="flex justify-center gap-6 text-3xl text-gray-600">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition duration-200">
             <FaGithub />

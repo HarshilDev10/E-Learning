@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import backarrow from '../assets/back.png' 
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const submitHandle = (e) =>{
+    e.preventDefault();
+    console.log("Email:",email)
+    console.log("Password:",password)
+  }
   return (
     <div className='flex justify-center items-center min-h-screen bg-gray-100 px-4 relative'>
 
  
 
-<form className='bg-white shadow-lg rounded-xl p-8 w-full max-w-sm relative'>
+<form onSubmit={submitHandle} className='bg-white shadow-lg rounded-xl p-8 w-full max-w-sm relative'>
 
-  {/* Back Button + Login Heading in same row */}
   <div className='flex items-center justify-between mb-6'>
-    {/* Back Button */}
     <button
       type='button'
       onClick={() => navigate('/')}
@@ -24,10 +30,8 @@ const Login = () => {
       <img src={backarrow} className='w-full h-full object-contain' alt='Back' />
     </button>
 
-    {/* Login Heading */}
     <h2 className='text-2xl font-semibold text-center flex-1 -ml-8'>Login</h2>
   </div>
-        {/* Email Input */}
         <div className='mb-4'>
           <label htmlFor='email' className='block mb-1 font-medium'>Email:</label>
           <input
@@ -37,10 +41,10 @@ const Login = () => {
             className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400'
             placeholder='Enter your email'
             required
+            onChange={(e)=>setEmail(e.target.value)}
           />
         </div>
 
-        {/* Password Input */}
         <div className='mb-4'>
           <label htmlFor='password' className='block mb-1 font-medium'>Password:</label>
           <input
@@ -50,10 +54,10 @@ const Login = () => {
             className='w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400'
             placeholder='Enter your password'
             required
+            onChange={(e)=>setPassword(e.target.value)}
           />
         </div>
 
-        {/* Login Button */}
         <div className='flex justify-center'>
           <button
             type='submit'
@@ -63,22 +67,18 @@ const Login = () => {
           </button>
         </div>
 
-        {/* Register Link */}
         <p className='mt-4 text-center text-sm'>
           New User? <Link to="/register" className='text-blue-600 hover:underline'>Register here</Link>
         </p>
 
-        {/* Divider */}
         <div className="flex items-center my-6">
           <div className="flex-grow h-px bg-gray-300"></div>
           <span className="mx-2 text-sm text-gray-500">or</span>
           <div className="flex-grow h-px bg-gray-300"></div>
         </div>
 
-        {/* Social Buttons */}
         <div className="flex flex-col gap-3 text-sm">
 
-          {/* Email */}
           <button className="btn bg-white hover:scale-110 hover:bg-slate-300 text-black border-[#e5e5e5] border-2 flex items-center justify-center gap-2 py-2 rounded-md">
             <svg aria-label="Email icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="black">
@@ -89,7 +89,6 @@ const Login = () => {
             Login with Email
           </button>
 
-          {/* GitHub */}
           <button className="btn bg-black hover:scale-110 hover:bg-slate-700 text-white border-black flex items-center justify-center gap-2 py-2 rounded-md">
             <svg aria-label="GitHub logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path fill="white" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path>
@@ -97,7 +96,6 @@ const Login = () => {
             Login with GitHub
           </button>
 
-          {/* Google */}
           <button className="btn bg-white hover:scale-110 hover:bg-slate-300 text-black border-[#e5e5e5] border-2 flex items-center justify-center gap-2 py-2 rounded-md">
             <svg aria-label="Google logo" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <g>
