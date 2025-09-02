@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
         backgroundImage: {
           'coding-white': "url('./src/assets/codingwhite.jpg')",
         },

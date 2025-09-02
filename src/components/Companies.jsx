@@ -13,7 +13,7 @@ const companies = [
   { id: 4, name: "Wipro", logo: wiproLogo },
   { id: 5, name: "HCL Technologies", logo: hclLogo },
   { id: 6, name: "Tata Technologies", logo: tataLogo },
-  { id: 7, name: "Infosys", logo: infosysLogo },
+  { id: 7, name: "Infosys",  logo: infosysLogo },
   { id: 8, name: "Reliance Industries", logo: relianceLogo },
   { id: 9, name: "Wipro", logo: wiproLogo },
   { id: 10, name: "HCL Technologies", logo: hclLogo },

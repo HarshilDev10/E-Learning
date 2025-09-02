@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 
 const App = () => (
-  <div className="min-h-screen">
+  <div className="min-h-screen font-poppins">
     <Header />
     <Hero />
     <Courses />

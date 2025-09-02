@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <nav className="flex items-center bg-white justify-between h-16 px-4 sm:px-8 md:px-20 border-b-2 sticky top-0 z-50">
-      <div className="text-xl font-bold">ABC College</div>
+      <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ">ABC College</div>
 
       <div className="hidden md:flex gap-8">
         <Link to="/" className='hover:text-blue-600'>Home</Link>
