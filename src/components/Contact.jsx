@@ -1,37 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaGlobe } from "react-icons/fa";
 
 const Contact = () => {
+  // Step 1: Create a state for form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  // Step 2: Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Step 3: Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Get existing messages from localStorage
+    const existingData = JSON.parse(localStorage.getItem("contactMessages")) || [];
+
+    // Add new message to the list
+    const updatedData = [...existingData, formData];
+
+    // Store updated list back into localStorage
+    localStorage.setItem("contactMessages", JSON.stringify(updatedData));
+
+    // Optional: clear the form after submission
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
+
+    alert("Your message has been saved successfully!");
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-16">
       <div className="max-w-6xl w-full bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
         
+        {/* Left - Form */}
         <div className="md:w-1/2 p-8 md:p-12">
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
           <p className="text-gray-600 mb-8">
             We'd love to hear from you! Fill out the form and we'll get in touch shortly.
           </p>
           
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
             <input
               type="text"
+              name="subject"
               placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
             <textarea
+              name="message"
               placeholder="Message"
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
             />
             <button
               type="submit"
